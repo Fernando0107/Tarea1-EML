@@ -1,7 +1,6 @@
 
 
-
-menu = {"Sumar" : "x + y", "Restar" : "x - y"}
+menu = {"1. Sumar": lambda x, y: x + y, "1. Restar" : lambda x, y: x - y}
 
 def gen_menu(dic):
 
@@ -9,6 +8,17 @@ def gen_menu(dic):
 
     for key, value in dic.items():
         print(key)
+
+        #print(menu[list(dic.keys())[1]](1,2))
+    x = int(input("Ingrese una opción del menú: "))
+    
+    if x not in list(range(1, len(dic.items())+1)):
+        print("Opción no valida.")
+    else:
+        print(menu[list(dic.keys())[x-1]](1,2))
+
+
+
 
 gen_menu(menu)
 
