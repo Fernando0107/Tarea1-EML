@@ -1,6 +1,4 @@
-
-
-menu = {"1. Sumar": lambda x, y: x + y, "1. Restar" : lambda x, y: x - y}
+menu = {"1. Sumar": lambda x, y: x + y, "2. Restar" : lambda x, y: x - y}
 
 def gen_menu(dic):
 
