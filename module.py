@@ -10,13 +10,10 @@ def gen_menu(dic):
         #print(menu[list(dic.keys())[1]](1,2))
     x = int(input("Ingrese una opción del menú: "))
     
-    if x not in list(range(1, len(dic.items())+1)):
+    if x not in list(range(1, len(dic.items()) + 1)):
         print("Opción no valida.")
     else:
-        print(menu[list(dic.keys())[x-1]](1,2))
-
-
-
+        print(menu[list(dic.keys())[x - 1]](1, 2))
 
 gen_menu(menu)
 
