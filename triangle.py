@@ -1,29 +1,27 @@
 file = open("triangle.txt", "r")
 x = []
-temporal = []
 
 for line in file:
 
     x.append(line.split())
 
 
-for i in range(len(x)):
+def triangulo(file):
 
-    for j in range(len(x[i])):
+    temporal = []
 
-        try:
-            if (int(x[i][j]) > int(x[i + 1][j + 1])):
-                temporal.append(int(x[i][j]))
-            else:
-                temporal.append(int(x[i + 1][j + 1]))
+    for i in range(len(x)):
 
-        except:
-            pass
+        for j in range(len(x[i]) - 1):
 
-total = sum(temporal)
-print(total)
+            mx = max(int(x[i][j]), int(x[i][j + 1]))
+
+            temporal.append(mx)
+
+    return sum(temporal)
 
 
+print(triangulo(x))
 """
 x[posicion de arrays][valor dentro del array]
 """
