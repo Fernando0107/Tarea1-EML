@@ -7,7 +7,7 @@ B = (4, 6)
 C = (1, 0)
 D = (-5, 3)
 
-
+# Funciones
 def cuadrado(
         a, b,
         c, d):
@@ -45,11 +45,14 @@ def dist(a, b):
     """
 
     d = math.sqrt(
-        ((a[0] - b[0])**(2))
-        + ((a[1] - b[1])**2)
+        ((a[0]
+        - b[0])**(2))
+        + ((a[1]
+        - b[1])**2)
     )
 
     return d
 
 
-print(cuadrado(A, B, C, D))
+print(cuadrado(A, B,
+                C, D))
