@@ -1,5 +1,7 @@
+# librerias
 import math
 
+# Tuplas (puntos x, y)
 A = (-2, 9)
 B = (4, 6)
 C = (1, 0)
@@ -9,7 +11,6 @@ D = (-5, 3)
 def cuadrado(
         a, b,
         c, d):
-
     """
     cuadrado: 
         Funcion que recibe cuatro parametros de tipo tupla.
@@ -33,12 +34,14 @@ def cuadrado(
     else:
         return("No es un cuadrado")
 
-def dist(a, b):
 
+def dist(a, b):
     """
     dist:
         Funcion que calcula la distancia entre 2 puntos.
         Recibe 2 parametros: 2 tuplas.
+    math.sqrt:
+        Raiz cuadrada de cierto parametro.
     """
 
     d = math.sqrt(
