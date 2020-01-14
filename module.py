@@ -1,24 +1,11 @@
-menu = {"1. Sumar": lambda x, y: x + y, "2. Restar" : lambda x, y: x - y}
+menu = {"1. Sumar": lambda x, y: x + y, "2. Restar": lambda x,
+        y: x - y, "3. Multiplicar": lambda x, y: x * y}
 
-def gen_menu(dic):
-    """
-    gen_menu:
-        Funcion que genera menus de manera dinamica.
-    """
+print("--- Menu ---\n" + "\n".join("{}".format(k) for k, v in menu.items()))
 
-    print("   --- Menu ---")
+x = int(input("Ingrese una opción del menú: "))
 
-    for key, value in dic.items():
-        print(key)
-
-        #print(menu[list(dic.keys())[1]](1,2))
-    x = int(input("Ingrese una opción del menú: "))
-    
-    if x not in list(range(1, len(dic.items()) + 1)): 
-        print("Opción no valida.")
-    else:
-        print(menu[list(dic.keys())[x - 1]](1, 2))
-
-gen_menu(menu)
-
-#anonima : lambda n: 
+if x not in list(range(1, len(menu.items()) + 1)):
+    print("Opción no valida.")
+else:
+    print(menu[list(menu.keys())[x - 1]](1, 2))
