@@ -1,5 +1,5 @@
-menu = {"1. Sumar": lambda x, y: x + y, "2. Restar": lambda x,
-        y: x - y, "3. Multiplicar": lambda x, y: x * y}
+menu = {"1. Sumar": lambda x, y: x + y, "2. Restar": lambda x, y: x - y,
+        "3. Multiplicar": lambda x, y: x * y}
 
 print("--- Menu ---\n" + "\n".join("{}".format(k) for k, v in menu.items()))
 
